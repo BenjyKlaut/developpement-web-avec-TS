@@ -14,7 +14,7 @@ enum Priorite {
 
 // ajoute une nouvelle tâche au tableau et la retourne.
 // id auto-incrémenté (commence à 1)
-function ajoutTache(
+function ajouterTache(
   titre: string,
   priorite: Priorite,
   tags: string[],
