@@ -47,3 +47,10 @@ function listerTache(): void {
     });
   }
 }
+
+// cherche par ID
+function trouverTache(idRecherche: number): Tache | null {
+  const tache = taches.find(t => t.id === idRecherche);
+
+  return tache || null;
+}
