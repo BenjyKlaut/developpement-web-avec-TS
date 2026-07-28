@@ -43,7 +43,7 @@ function listerTache(): void {
     console.log("=== LISTE DES TÂCHES ===\n");
     taches.forEach((tache) => {
       console.log(
-        `[#${tache.id}] "${tache.titre}" [${tache.priorite}] - Tags: ${tache.tags.join(", ")} - ${tache.terminee ? "FAITE" : "NON FAITE"}`
+        `[#${tache.id}] "${tache.titre}" [${tache.priorite}] - Tags: ${tache.tags.join(", ")} - ${tache.terminee ? "FAITE" : "NON FAITE"}`,
       );
     });
   }
@@ -51,7 +51,7 @@ function listerTache(): void {
 
 // cherche par ID
 function trouverTache(idRecherche: number): Tache | null {
-  const tache = taches.find(t => t.id === idRecherche);
+  const tache = taches.find((t) => t.id === idRecherche);
 
   return tache || null;
 }
@@ -65,3 +65,21 @@ function marquerFaite(id: number): boolean {
   }
   return false;
 }
+
+// Teste avec ce scénario :
+// Ajoute 3 tâches (dont une avec responsable, une sans)
+ajouterTache("Tâche 1", Priorite.Haute, ["config"], "Responsable 1");
+ajouterTache("Tâche 2", Priorite.Moyenne, ["model"]);
+ajouterTache("Tâche 3", Priorite.Basse, ["review"], "Responsable 3");
+
+// Liste toutes les tâches
+listerTache();
+
+// Marque la tâche 2 comme faite
+marquerFaite(2);
+
+// Liste à nouveau
+listerTache();
+
+// Cherche la tâche ID 99 (inexistante) et affiche "Introuvable"
+trouverTache(99);
