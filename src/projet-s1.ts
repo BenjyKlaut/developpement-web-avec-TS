@@ -42,18 +42,28 @@ function listerTache(): void {
   } else {
     console.log("=== LISTE DES TÂCHES ===\n");
     taches.forEach((tache) => {
-      console.log(
-        `[#${tache.id}] "${tache.titre}" [${tache.priorite}] - Tags: ${tache.tags.join(", ")} - ${tache.terminee ? "FAITE" : "NON FAITE"} ${tache.responsable ? ` - Responsable: ${tache.responsable}` : ""}`,
-      );
+      afficherTache(tache);
     });
   }
 }
 
+function afficherTache(tache: Tache): void {
+  console.log(
+    `[#${tache.id}] "${tache.titre}" [${tache.priorite}] - Tags: ${tache.tags.join(", ")} - ${tache.terminee ? "FAITE" : "NON FAITE"} ${tache.responsable ? ` - Responsable: ${tache.responsable}` : ""}`,
+  );
+}
+
 // cherche par ID
-function trouverTache(idRecherche: number): Tache | null {
+function trouverTache(idRecherche: number): Tache | undefined {
   const tache = taches.find((t) => t.id === idRecherche);
 
-  return tache || null;
+  if (!tache) {
+    console.log(`Tâche avec ID ${idRecherche} introuvable.`);
+    return undefined;
+  }
+
+  afficherTache(tache);
+  return tache;
 }
 
 // trouve la tâche, passe terminee à true, retourne true si trouvée, false sinon
