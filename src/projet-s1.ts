@@ -40,6 +40,7 @@ function listerTache(): void {
     console.log("Aucune tâche à afficher.");
     return;
   } else {
+    console.log("=== LISTE DES TÂCHES ===\n");
     taches.forEach((tache) => {
       console.log(
         `[#${tache.id}] "${tache.titre}" [${tache.priorite}] - Tags: ${tache.tags.join(", ")} - ${tache.terminee ? "FAITE" : "NON FAITE"}`
