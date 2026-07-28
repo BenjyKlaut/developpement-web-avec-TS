@@ -43,7 +43,7 @@ function listerTache(): void {
     console.log("=== LISTE DES TÂCHES ===\n");
     taches.forEach((tache) => {
       console.log(
-        `[#${tache.id}] "${tache.titre}" [${tache.priorite}] - Tags: ${tache.tags.join(", ")} - ${tache.terminee ? "FAITE" : "NON FAITE"}`,
+        `[#${tache.id}] "${tache.titre}" [${tache.priorite}] - Tags: ${tache.tags.join(", ")} - ${tache.terminee ? "FAITE" : "NON FAITE"} ${tache.responsable ? ` - Responsable: ${tache.responsable}` : ""}`,
       );
     });
   }
@@ -68,9 +68,9 @@ function marquerFaite(id: number): boolean {
 
 // Teste avec ce scénario :
 // Ajoute 3 tâches (dont une avec responsable, une sans)
-ajouterTache("Tâche 1", Priorite.Haute, ["config"], "Responsable 1");
+ajouterTache("Tâche 1", Priorite.Haute, ["config"], "Bob");
 ajouterTache("Tâche 2", Priorite.Moyenne, ["model"]);
-ajouterTache("Tâche 3", Priorite.Basse, ["review"], "Responsable 3");
+ajouterTache("Tâche 3", Priorite.Basse, ["review"], "Michael");
 
 // Liste toutes les tâches
 listerTache();
