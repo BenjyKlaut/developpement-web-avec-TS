@@ -54,3 +54,13 @@ function trouverTache(idRecherche: number): Tache | null {
 
   return tache || null;
 }
+
+// trouve la tâche, passe terminee à true, retourne true si trouvée, false sinon
+function marquerFaite(id: number): boolean {
+  const tache = trouverTache(id);
+  if (tache) {
+    tache.terminee = true;
+    return true;
+  }
+  return false;
+}
