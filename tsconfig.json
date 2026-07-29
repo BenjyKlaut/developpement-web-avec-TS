@@ -3,8 +3,8 @@
     "target": "ES2020",
     "module": "commonjs",
     "strict": true,
-    "outDir": "./dist",
-    "rootDir": "./src",
+    "outDir": "semaine-01-typescript/dist",
+    "rootDir": "semaine-01-typescript/src",
     "esModuleInterop": true
   }
 }
