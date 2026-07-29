@@ -7,9 +7,9 @@ let id: number = 1;
 
 // Définition d'une énumération pour les priorités des tâches
 enum Priorite {
-  Haute = 1,
-  Moyenne = 2,
-  Basse = 3,
+  HAUTE = 1,
+  MOYENNE = 2,
+  BASSE = 3,
 }
 
 // ajoute une nouvelle tâche au tableau et la retourne.
@@ -74,9 +74,9 @@ function marquerFaite(id: number): boolean {
 
 // Teste avec ce scénario :
 // Ajoute 3 tâches (dont une avec responsable, une sans)
-ajouterTache("Tâche 1", Priorite.Haute, ["config"], "Bob");
-ajouterTache("Tâche 2", Priorite.Moyenne, ["model"]);
-ajouterTache("Tâche 3", Priorite.Basse, ["review"], "Michael");
+ajouterTache("Tâche 1", Priorite.HAUTE, ["config"], "Bob");
+ajouterTache("Tâche 2", Priorite.MOYENNE, ["model"]);
+ajouterTache("Tâche 3", Priorite.BASSE, ["review"], "Michael");
 
 // Liste toutes les tâches
 listerTache();
