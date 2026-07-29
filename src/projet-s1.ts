@@ -55,15 +55,7 @@ function afficherTache(tache: Tache): void {
 
 // cherche par ID
 function trouverTache(idRecherche: number): Tache | undefined {
-  const tache = taches.find((t) => t.id === idRecherche);
-
-  if (!tache) {
-    console.log(`Tâche avec ID ${idRecherche} introuvable.`);
-    return undefined;
-  }
-
-  afficherTache(tache);
-  return tache;
+  return taches.find((t) => t.id === idRecherche);
 }
 
 // trouve la tâche, passe terminee à true, retourne true si trouvée, false sinon
