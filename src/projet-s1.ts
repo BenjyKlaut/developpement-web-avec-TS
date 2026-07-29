@@ -49,7 +49,7 @@ function listerTache(): void {
 
 function afficherTache(tache: Tache): void {
   console.log(
-    `[#${tache.id}] "${tache.titre}" [${tache.priorite}] - Tags: ${tache.tags.join(", ")} - ${tache.terminee ? "FAITE" : "NON FAITE"} ${tache.responsable ? ` - Responsable: ${tache.responsable}` : ""}`,
+    `[#${tache.id}] "${tache.titre}" [${Priorite[tache.priorite]}] - Tags: ${tache.tags.join(", ")} - ${tache.terminee ? "FAITE" : "NON FAITE"} ${tache.responsable ? ` - Responsable: ${tache.responsable}` : ""}`,
   );
 }
 
