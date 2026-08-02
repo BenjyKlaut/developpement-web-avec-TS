@@ -19,3 +19,12 @@ Application de gestion de tâches fullstack construite avec TypeScript, React et
 cd semaine-02-react
 npm install
 npm run dev
+
+---
+
+## 🎯 Vérifie que tout tourne
+
+Depuis ton dossier `semaine-02-react` sur Ubuntu, exécute :
+
+```bash
+npm run dev
