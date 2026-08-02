@@ -5,10 +5,10 @@ export interface Tache {
   terminee: boolean;
   tags: string[];
   responsable?: string; // optionnelle
-};
+}
 
 export enum Priorite {
-  HAUTE: 1,
-  MOYENNE: 2,
-  BASSE: 3
-};
+  HAUTE = 1,
+  MOYENNE = 2,
+  BASSE = 3,
+}
