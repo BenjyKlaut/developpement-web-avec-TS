@@ -1,5 +1,5 @@
 import { TaskCard } from './components/taskCard';
-import { Tache, Priorite } from './types';
+import { type Tache, Priorite } from './types';
 import './App.css'
 
 function App() {

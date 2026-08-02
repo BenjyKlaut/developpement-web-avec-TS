@@ -1,4 +1,4 @@
-import { Tache, Priorite } from '../types';
+import { type Tache, Priorite } from '../types';
 
 interface TaskCardProps {
   tache: Tache;
