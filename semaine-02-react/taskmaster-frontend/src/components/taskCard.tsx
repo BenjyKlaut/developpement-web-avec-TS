@@ -4,7 +4,7 @@ interface TaskCardProps {
   tache: Tache;
 }
 
-function TaskCard({ tache }: TaskCardProps) {
+export function TaskCard({ tache }: TaskCardProps) {
   const statut = tache.terminee ? "FAIT" : "NON FAIT";
   const prioriteNom = Priorite[tache.priorite];
 
