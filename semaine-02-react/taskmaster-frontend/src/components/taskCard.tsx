@@ -1,4 +1,5 @@
   import { type Tache, Priorite } from '../types';
+  import './taskCard.css';
 
 interface TaskCardProps {
   tache: Tache;
