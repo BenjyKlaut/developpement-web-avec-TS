@@ -1,11 +1,11 @@
-import { type Tache, Priorite } from '../types';
+  import { type Tache, Priorite } from '../types';
 
 interface TaskCardProps {
   tache: Tache;
 }
 
-export function TaskCard({ tache }: TaskCardProps) {
-  const statut = tache.terminee ? "FAIT" : "NON FAIT";
+function TaskCard({ tache }: TaskCardProps) {
+  const statut = tache.terminee ? "FAITE" : "NON FAITE";
   const prioriteNom = Priorite[tache.priorite];
 
   return (

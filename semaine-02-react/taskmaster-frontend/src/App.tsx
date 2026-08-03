@@ -1,4 +1,4 @@
-import { TaskCard } from './components/taskCard';
+import TaskCard from './components/taskCard';
 import { type Tache, Priorite } from './types';
 import './App.css'
 
