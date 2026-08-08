@@ -38,7 +38,7 @@ function App() {
     <div style={{ maxWidth: "600px", margin: "0 auto", padding: "20px" }}>
       <h1>Taskmaster Pro</h1>
       {taches.map((tache) => (
-        <TaskCard key={tache.id} tache={tache} />
+        <TaskCard key={tache.id} tache={tache} onMarquerFaite={marquerFaite} />
       ))}
     </div>
   );
